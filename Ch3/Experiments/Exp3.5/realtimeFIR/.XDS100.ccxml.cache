@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<configurations>
+
+  <configuration id="Texas Instruments XDS100 USB Emulator_0">
+    <connection class="185076" desc="Texas Instruments XDS100 USB Emulator_0" id="Texas Instruments XDS100 USB Emulator_0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml">
+      <connectionType Type="TIXDS100" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="SEPK.POD_DRVR" Name="Emulator Filename" Type="hiddenfield" Value="jioserdesusb.dll" id="Emulator Filename" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="SEPK.POD_PORT" Name="Emulator I/O Port" Type="hiddenfield" Value="0" id="Emulator I/O Port" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="USCIF.TDOEDGE" Name="TMS/TDO Output Timing" Type="hiddenfield" Value="FALL" id="TMS/TDO Output Timing" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.DEVICE_NAME" Name="The JTAG Hardware" Type="choicelist" Value="0" id="The JTAG Hardware" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml">
+        <choice Name="Texas Instruments XDS100 USB" value="Texas Instruments XDS100 USB">
+          <property ID="PRODUCT.TITLE" Name="Title" Type="hiddenfield" Value="Texas Instruments XDS100 USB" id="Title"/>
+          <property ID="PRODUCT.ALIAS" Name="Alias" Type="hiddenfield" Value="TI_XDS100_USB" id="Alias"/>
+          <property ID="PRODUCT.NAME" Name="Name" Type="hiddenfield" Value="FTDI_FT2232" id="Name"/>
+          <property ID="FTDI_FT2232.USB_VID" Name="USB VID" Type="hiddenfield" Value="0x0403" id="USB VID"/>
+          <property ID="FTDI_FT2232.USB_PID" Name="USB PID" Type="hiddenfield" Value="0xa6d0" id="USB PID"/>
+          <property ID="FTDI_FT2232.GPIO_L0" Name="TRST" Type="hiddenfield" Value="TRSTn,Active_Low" id="TRST"/>
+          <property ID="FTDI_FT2232.GPIO_L1" Name="EMU Pin Enable" Type="hiddenfield" Value="EMU_Pin_Enable,Active_Low" id="EMU Pin Enable"/>
+          <property ID="FTDI_FT2232.GPIO_L2" Name="EMU0" Type="hiddenfield" Value="EMU_Pin_0,Active_Low" id="EMU0"/>
+          <property ID="FTDI_FT2232.GPIO_L3" Name="EMU1" Type="hiddenfield" Value="EMU_Pin_1,Active_Low" id="EMU1"/>
+          <property ID="FTDI_FT2232.GPIO_H0" Name="SRST" Type="hiddenfield" Value="SRSTn,Active_High" id="SRST"/>
+          <property ID="FTDI_FT2232.GPIO_H1" Name="SRST In" Type="hiddenfield" Value="SRSTn_In,Active_Low" id="SRST In"/>
+          <property ID="FTDI_FT2232.GPIO_H2" Name="Power Loss Detect" Type="hiddenfield" Value="Power_Loss_Detect,Active_Low" id="Power Loss Detect"/>
+          <property ID="FTDI_FT2232.GPIO_H3" Name="Power Loss Reset" Type="hiddenfield" Value="Power_Loss_Reset,Active_High" id="Power Loss Reset"/>
+          <property ID="USCIF.JTAGBOOT_MODE" Name="The JTAG nTRST Boot-Mode" Type="choicelist" Value="0" id="The JTAG nTRST Boot-Mode">
+            <choice Name="Disabled - Both EMU pins remain hi-z" value="disable">
+              <property ID="USCIF.JTAGBOOT_VALUE" Name="unused" Type="hiddenfield" Value="hiz" id="unused"/>
+            </choice>
+            <choice Name="Enabled - Both EMU pins are high" value="enable">
+              <property ID="USCIF.JTAGBOOT_VALUE" Name="unused" Type="hiddenfield" Value="11" id="unused"/>
+            </choice>
+            <choice Name="Enabled - EMU1 is high, EMU0 is low" value="enable">
+              <property ID="USCIF.JTAGBOOT_VALUE" Name="unused" Type="hiddenfield" Value="10" id="unused"/>
+            </choice>
+            <choice Name="Enabled - EMU1 is low, EMU0 is high" value="enable">
+              <property ID="USCIF.JTAGBOOT_VALUE" Name="unused" Type="hiddenfield" Value="01" id="unused"/>
+            </choice>
+            <choice Name="Enabled - Both EMU pins are low" value="enable">
+              <property ID="USCIF.JTAGBOOT_VALUE" Name="unused" Type="hiddenfield" Value="00" id="unused"/>
+            </choice>
+          </property>
+          <property ID="USCIF.POWERBOOT_MODE" Name="The Power-On-Reset Boot-Mode" Type="choicelist" Value="0" id="The Power-On-Reset Boot-Mode">
+            <choice Name="Disabled - Both EMU pins remain hi-z" value="disable">
+              <property ID="USCIF.POWERBOOT_VALUE" Name="unused" Type="hiddenfield" Value="hiz" id="unused"/>
+            </choice>
+            <choice Name="Enabled - Both EMU pins are high" value="enable">
+              <property ID="USCIF.POWERBOOT_VALUE" Name="unused" Type="hiddenfield" Value="11" id="unused"/>
+            </choice>
+            <choice Name="Enabled - EMU1 is high, EMU0 is low" value="enable">
+              <property ID="USCIF.POWERBOOT_VALUE" Name="unused" Type="hiddenfield" Value="10" id="unused"/>
+            </choice>
+            <choice Name="Enabled - EMU1 is low, EMU0 is high" value="enable">
+              <property ID="USCIF.POWERBOOT_VALUE" Name="unused" Type="hiddenfield" Value="01" id="unused"/>
+            </choice>
+            <choice Name="Enabled - Both EMU pins are low" value="enable">
+              <property ID="USCIF.POWERBOOT_VALUE" Name="unused" Type="hiddenfield" Value="00" id="unused"/>
+            </choice>
+          </property>
+        </choice>
+      </property>
+      <property ID="USCIF.TCLK_PROGRAM" Name="The JTAG TCLK Frequency (MHz)" Type="choicelist" Value="0" id="The JTAG TCLK Frequency (MHz)" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml">
+        <choice Name="Fixed default 1.0MHz frequency" value="SPECIFIC">
+          <property ID="USCIF.TCLK_FREQUENCY" Name="unused" Type="hiddenfield" Value="1.0" id="unused"/>
+        </choice>
+        <choice Name="Fixed with user specified faster value" value="SPECIFIC">
+          <property ID="USCIF.TCLK_FREQUENCY" Name="-- Enter a value from 1.0MHz to 6.0MHz" Type="stringfield" Value="1.0MHz" id="-- Enter a value from 1.0MHz to 6.0MHz"/>
+        </choice>
+        <choice Name="Fixed with user specified slower value" value="SPECIFIC">
+          <property ID="USCIF.TCLK_FREQUENCY" Name="-- Enter a value from 488Hz to 1.0MHz" Type="stringfield" Value="100KHz" id="-- Enter a value from 488Hz to 1.0MHz"/>
+        </choice>
+      </property>
+      <drivers id="drivers" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\drivers\tixds100c55x.xml">
+        <isa ProcID="0x50015400" Type="TMS320C55XX" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\drivers\tixds100c55x.xml">
+          <driver file="C:\Program Files\Texas Instruments\ccsv4\emulation\drivers\tixds55x.dvr">
+            <property Type="hiddenfield" Value="true" id="realtimeEnabled"/>
+            <connectionType Type="TIXDS100"/>
+          </driver>
+        </isa>
+      </drivers>
+      <platform id="platform_0">
+        <device desc="TMS320C5505_0" description="" id="TMS320C5505_0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Devices\c5505.xml" partnum="TMS320C5505">
+          <cpu desc="C55xx" description="The C55xx CPU" id="C55xx" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" isa="TMS320C55XX">
+            <property Type="stringfield" Value="--memory_model=huge --ptrdiff_size=32 --silicon_version=5505" id="CompilerBuildOptions"/>
+            <property Type="stringfield" Value="rts55h.lib" id="RTSlib"/>
+            <property Type="filepathfield" Value="C:\WorkTI\SW\C5505_CSL\C5505_CSL_1.3_20090820\VC5505_CSL\CCS_v4.0_Examples\c5505evm.gel" id="GEL File"/>
+          </cpu>
+        </device>
+      </platform>
+    </connection>
+  </configuration>
+
+</configurations>
